@@ -3,15 +3,5 @@ html,body{
   margin:0;
   padding:0;
 }
-.search-section {
-  background-image: url('src/assets/images/pattern-bg-mobile.png');
-  background-size: cover;
-  background-position: center;
-}
 
-@media (min-width: 640px) {
-  .search-section {
-    background-image: url('src/assets/images/pattern-bg-desktop.png');
-  }
-}
 
