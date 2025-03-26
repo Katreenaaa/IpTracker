@@ -38,7 +38,7 @@ function App() {
   return (
     <>
     <div className="bg-[#c8c8c8] min-h-screen flex flex-col">
-      <div className='relative z-10 search-section h-[46vh] flex flex-col items-center gap-4 sm:gap-8 pb-20'
+      <div className='relative z-10 h-[46vh] flex flex-col items-center gap-4 sm:gap-8 pb-20'
         style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
