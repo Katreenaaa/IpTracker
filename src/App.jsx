@@ -82,7 +82,7 @@ function App() {
 
     </div>
     <div className="inset-0 z-0 w-full h-[55vh]">
-    <div className="  w-full h-full border">
+    <div className="  w-full h-full">
     <MapSection ipData={ipData} />
   </div>
   </div>
