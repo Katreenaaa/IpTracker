@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import submitArrow from "./assets/images/icon-arrow.svg";
+import mobileBg from "./assets/images/pattern-bg-mobile.png";
+import desktopBg from "./assets/images/pattern-bg-desktop.png";
 import "leaflet/dist/leaflet.css";
 import MapSection from "./Map";
 
@@ -7,6 +9,8 @@ import MapSection from "./Map";
 function App() {
   const [ipData, setIpData] = useState(null);
   const [ipInput, setIpInput] = useState("");
+  const backgroundImage = window.innerWidth >= 640 ? desktopBg : mobileBg;
+
 
   useEffect(() => {
     fetchIPData(""); // Fetch user's own IP initially
@@ -34,7 +38,12 @@ function App() {
   return (
     <>
     <div className="bg-[#c8c8c8] min-h-screen flex flex-col">
-      <div className='relative z-10 search-section h-[46vh] flex flex-col items-center gap-4 sm:gap-8 pb-20'>
+      <div className='relative z-10 search-section h-[46vh] flex flex-col items-center gap-4 sm:gap-8 pb-20'
+        style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}>
     <header className="pt-3 mb-2 sm:mb-0">
       <h1 className="text-xl sm:text-3xl text-center font-semibold text-white ">IP Address Tracker</h1>
     </header>
